@@ -24,4 +24,6 @@ Work data is local-first. Capture can be paused, sensitive applications can be e
 
 Files under `brand/` are the approved public WorkTrace logo and project introduction images. Please do not recolor, distort, or recreate the logo.
 
+The current public brand version is recorded in `brand/VERSION`. Verify reusable assets with `shasum -a 256 -c brand/SHA256SUMS`.
+
 **WorkTrace — Your work, made legible.**
