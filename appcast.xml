@@ -1,0 +1,56 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+-->
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>S-tello Trace</title>
+        <item>
+            <title>2.1.0</title>
+            <pubDate>Tue, 14 Jul 2026 15:44:29 +0800</pubDate>
+            <link>https://alextangson.github.io/worktrace-releases/</link>
+            <sparkle:version>210</sparkle:version>
+            <sparkle:shortVersionString>2.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[# S-tello Trace 2.1.0
+
+这一版把 S-tello Trace 从“自动记时间”推进为“理解你的工作方式”。
+
+## 新功能
+
+- 新增岗位与职责画像：首次安装可说明自己的岗位、职责和希望 S-tello Trace 重点理解的内容。
+- 简报会结合工作上下文，呈现职责覆盖、交付证据、协作关系和工作流线索。
+- 增加线下工作记录入口，补充会议、拜访、沟通等电脑之外的工作。
+- 默认打开今天时间线；“复盘”统一调整为更清楚的“简报”。
+- OKR 暂时从主导航隐藏，项目入口降级，减少不必要的产品负担。
+- 新增版本更新说明，并可在线检测 GitHub Releases 中的新版本。
+- 接入签名的应用内自动更新：发现新版本后可直接下载、验签、替换并重启。
+- 自动化机会基于近 4 周证据形成：先展示实际重复动作，再分流为“可自助原型”“建议 FDE 评估”或“继续观察”。
+- 自动化机会顶部新增自然语言 FDE 诊断：说明反复在做什么、为什么值得或不值得改造，以及下一步应自助原型、请 FDE 诊断还是继续观察；复制的 Brief 会带上完整诊断，便于直接邀请 FDE 做人工复核。
+- 可从单个候选复制 FDE 实施 Brief，内容包含原始证据、系统与权限、自动化边界、ROI 假设、Pilot 和验收 Delta。
+
+## 体验优化
+
+- 将“补一笔”“打开今天”等偏口语、含义不清的表达改为专业、可预期的产品文案。
+- 老用户会看到工作画像迁移提示，不需要删除历史数据或重新安装。
+- 简报增加真实工作流证据，避免只给抽象结论。
+- 简报加宽并改善职责纠正反馈；单阶段工作必须跨日期出现相同具体动作，不能只因同属一个职责或项目就被合并。
+- 职责外判断会立即移出待确认列表，并支持撤销后重新判断。
+- S-tello Trace 现在作为完整桌面 App 常驻程序坞和 Cmd-Tab；菜单栏保留为快捷入口。
+- 放大“岗位工作系统”的标题、指标、卡片与自动化机会层级，提升宽屏可读性。
+- 观察项不再显示未经验证的“预计释放”承诺；复制 FDE 诊断由用户主动发起，本地证据不会自动上传。
+- Claude CLI 与 Codex CLI 增加真实调用验证和稳定性说明；生产环境仍优先推荐 API。
+- 修复时区跟随、失败批次阻塞、录屏权限反复弹窗以及空时间线误导状态。
+
+## 隐私
+
+工作数据继续默认保存在本机；更新检测只请求 GitHub 的公开 Release 元数据，不上传工作内容。
+]]></description>
+            <enclosure url="https://github.com/alextangson/worktrace-releases/releases/download/v2.1.0/S-tello-Trace-2.1.0.dmg" length="18405116" type="application/octet-stream" sparkle:edSignature="l5Rih2s7eKU8UTGIbzJbFYgV0p1UF0ybpilYjMHoOU/MzqaY3V82JU2tvdtWARA1XZICibjmKZZxD/bVbHwUAw=="/>
+        </item>
+    </channel>
+</rss>
+<!-- sparkle-signatures:
+edSignature: Hx076/uJ5uXE8D3pYq6jj0iOSYV8RR6Zqd/TUerCkcCBiVx+v2QJpSdRID4bJxrh27V+Bb3pz+wNQDIYBroRDw==
+length: 3844
+-->
