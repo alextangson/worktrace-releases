@@ -4,6 +4,12 @@
 
 This is the public binary distribution repository for **WorkTrace**. It contains signed installers, checksums, release notes, and reusable product images. The application source code remains in a private repository.
 
+Official public pages:
+
+- Product: <https://alextangson.github.io/worktrace-releases/>
+- Privacy policy: <https://alextangson.github.io/worktrace-releases/privacy/>
+- Support: <https://alextangson.github.io/worktrace-releases/support/>
+
 WorkTrace turns computer activity and offline work into an evidence-backed timeline, work memory, and delivery brief—organized around the user's actual role and responsibilities.
 
 ## Downloads
@@ -18,7 +24,7 @@ The macOS app will be Developer ID signed and notarized before public distributi
 
 ## Privacy
 
-Work data is local-first. Capture can be paused, sensitive applications can be excluded, and screenshots are used for immediate analysis rather than retained as a work archive.
+Work data is local-first. Capture can be paused, sensitive applications can be excluded, and local screenshot retention can be disabled. See the public [privacy policy](https://alextangson.github.io/worktrace-releases/privacy/) for the current data-handling details.
 
 ## Official assets
 
