@@ -1,56 +1,69 @@
-<?xml version="1.0" standalone="yes"?>
-<!-- sparkle-sign-warning:
+<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
 IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
--->
-<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>S-tello Trace</title>
         <item>
-            <title>2.1.0</title>
-            <pubDate>Tue, 14 Jul 2026 15:44:29 +0800</pubDate>
+            <title>2.1.4</title>
+            <pubDate>Sat, 18 Jul 2026 15:12:34 +0800</pubDate>
             <link>https://alextangson.github.io/worktrace-releases/</link>
-            <sparkle:version>210</sparkle:version>
-            <sparkle:shortVersionString>2.1.0</sparkle:shortVersionString>
+            <sparkle:version>214</sparkle:version>
+            <sparkle:shortVersionString>2.1.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[# S-tello Trace 2.1.0
+            <description sparkle:format="markdown"><![CDATA[# S-tello Trace 2.1.4
 
-这一版把 S-tello Trace 从“自动记时间”推进为“理解你的工作方式”。
+这一版把个人工作记忆、可确认的重复 Loop、FDE handoff、工作系统和内测安全修复整合为同一个可分发版本。重点不是增加更多入口，而是让“记录工作—理解流程—发现自动化—进入 FDE 实施”形成可信的连续体验。
 
-## 新功能
+## 从工作记忆到可实施机会
 
-- 新增岗位与职责画像：首次安装可说明自己的岗位、职责和希望 S-tello Trace 重点理解的内容。
-- 简报会结合工作上下文，呈现职责覆盖、交付证据、协作关系和工作流线索。
-- 增加线下工作记录入口，补充会议、拜访、沟通等电脑之外的工作。
-- 默认打开今天时间线；“复盘”统一调整为更清楚的“简报”。
-- OKR 暂时从主导航隐藏，项目入口降级，减少不必要的产品负担。
-- 新增版本更新说明，并可在线检测 GitHub Releases 中的新版本。
-- 接入签名的应用内自动更新：发现新版本后可直接下载、验签、替换并重启。
-- 自动化机会基于近 4 周证据形成：先展示实际重复动作，再分流为“可自助原型”“建议 FDE 评估”或“继续观察”。
-- 自动化机会顶部新增自然语言 FDE 诊断：说明反复在做什么、为什么值得或不值得改造，以及下一步应自助原型、请 FDE 诊断还是继续观察；复制的 Brief 会带上完整诊断，便于直接邀请 FDE 做人工复核。
-- 可从单个候选复制 FDE 实施 Brief，内容包含原始证据、系统与权限、自动化边界、ROI 假设、Pilot 和验收 Delta。
+- 新增持续工作线程和 Personal Loop：只有同一具体工作在至少三个当前日期出现并由本人确认，才会进入可复用工作流。
+- 新增可编辑的 Discovery Review，把证据、步骤、例外、权限和成功标准整理成明确的实施边界。
+- 可生成隐私最小化的本地 FDE handoff，交给 Codex、Claude Code 或 FDE 继续诊断；本地证据不会因为生成 handoff 自动上传。
+- 自动化机会可以继续进入 SOP、Agent Blueprint、受控 Pilot 与实施前后 Delta，避免只给抽象建议。
 
-## 体验优化
+## 工作系统与自动化机会
 
-- 将“补一笔”“打开今天”等偏口语、含义不清的表达改为专业、可预期的产品文案。
-- 老用户会看到工作画像迁移提示，不需要删除历史数据或重新安装。
-- 简报增加真实工作流证据，避免只给抽象结论。
-- 简报加宽并改善职责纠正反馈；单阶段工作必须跨日期出现相同具体动作，不能只因同属一个职责或项目就被合并。
-- 职责外判断会立即移出待确认列表，并支持撤销后重新判断。
-- S-tello Trace 现在作为完整桌面 App 常驻程序坞和 Cmd-Tab；菜单栏保留为快捷入口。
-- 放大“岗位工作系统”的标题、指标、卡片与自动化机会层级，提升宽屏可读性。
-- 观察项不再显示未经验证的“预计释放”承诺；复制 FDE 诊断由用户主动发起，本地证据不会自动上传。
-- Claude CLI 与 Codex CLI 增加真实调用验证和稳定性说明；生产环境仍优先推荐 API。
-- 修复时区跟随、失败批次阻塞、录屏权限反复弹窗以及空时间线误导状态。
+- “简报”和“工作系统”拆分为两个独立页面：简报用于个人回顾，工作系统用于查看近 4 周职责、重复工作流和自动化机会。
+- 自动化机会继续连接证据、ROI 假设、SOP、Agent Blueprint、Pilot 和实施前后 Delta，减少只有抽象分类、无法落地的问题。
+- 优化工作系统的加载状态和信息层级，保留未识别到机会时的证据积累进度。
 
-## 隐私
+## 隐私与数据控制
 
-工作数据继续默认保存在本机；更新检测只请求 GitHub 的公开 Release 元数据，不上传工作内容。
+- 加固“完全不记录”“只记录、不截图”和显式 Ontology 同意边界；登录、加入组织或切换租户不会自动上传本机历史。
+- 完成固定范围的云数据导出，以及账号/组织删除的预览、重新认证、精确确认和失败重试边界；独立删除网关尚未公开，邀请码 Beta 的云账号删除仍通过人工支持处理。
+- 修复反馈离线队列、重复提交、失败隔离和回执丢失等边界，只有真正持久化的反馈才会显示为已排队。
+- 收紧本机调试服务和云端 RPC 权限；依赖异常、迁移版本不一致或邮箱安全策略缺失时会安全停止云功能，不影响本地采集。
+
+## 本次公开构建边界
+
+- 原始轨迹、OCR、时间线和本地回放仍以本机为数据面；登录不会上传已有工作历史，使用托管模型也不等于开启组织同步。
+- 全新安装默认使用 S-tello 托管的 Qwen3.5 Flash。内测用户通过邮箱或 Google 登录，
+  阅读并勾选当前版本的托管处理说明后，才可以输入一次性邀请码，领取 500 万 Token、
+  14 天有效的分析额度；模型 Key 不下发到客户端。
+- 默认选择托管 provider 不等于允许兑换或调用。升级前已经使用托管额度的用户也要重新
+  确认；未同意时邀请码兑换、手动测试和后台分析都会停止，托管视觉还需要另一项独立同意。
+- 用户可在“账户与 AI”撤回本机同意；新的托管调用会立即停止，已经在途但尚未返回的
+  结果不会进入本机分析或持久化。
+- 托管请求会经 Cloudflare 上的 S-tello Gateway 发往阿里云 Model Studio 北京区；
+  当前任务所需上下文会离开设备，原始本机证据库不会整体上传。上游没有给出可承诺的
+  精确保留期，因此产品不会声称“零保留”或“立即删除”；完整边界见中英文隐私页。
+- 用户仍可随时切换为自己的 API Key，或在性能足够的设备上使用本地 Ollama；已有用户的模型设置不会被覆盖。
+- 这里的 local-first 指原始轨迹、OCR、像素库和个人数据控制留在本机，云端不可用时
+  核心功能仍工作；它不等于要求普通用户部署本地模型。
+- 本地采集、今天、周视图、简报、工作系统、搜索、导出、Loop 确认和本地 FDE handoff
+  不依赖组织云。公开 C build 隐藏组织同步、tenant switcher、FDE 云治理、云数据自助
+  导出/删除和 lifecycle UI；这些能力仍不作为本次公开功能。
+
+## 稳定性
+
+- 修复 408/5xx 被错误视为永久失败、确认响应丢失后无法安全重试等同步问题。
+- 保留近期对时间线归因、应用图标和分析积压恢复的修复，降低碎片化和错误合并。
+- 更新内置界面资源、发布检查和签名流程，确保安装包包含本次所有前端与原生改动。
 ]]></description>
-            <enclosure url="https://github.com/alextangson/worktrace-releases/releases/download/v2.1.0/S-tello-Trace-2.1.0.dmg" length="18405116" type="application/octet-stream" sparkle:edSignature="l5Rih2s7eKU8UTGIbzJbFYgV0p1UF0ybpilYjMHoOU/MzqaY3V82JU2tvdtWARA1XZICibjmKZZxD/bVbHwUAw=="/>
+            <enclosure url="https://github.com/alextangson/worktrace-releases/releases/download/v2.1.4/S-tello-Trace-2.1.4.dmg" length="24981526" type="application/octet-stream" sparkle:edSignature="DDF2bXUp2WOAMTjWGGqFERS9Qv6OJ3zFyRmDyroYMKHozo/qpNT0tNdnCu6enGDO1Ct/R0heLN7r/GQuzcJNAw=="></enclosure>
         </item>
     </channel>
-</rss>
-<!-- sparkle-signatures:
-edSignature: Hx076/uJ5uXE8D3pYq6jj0iOSYV8RR6Zqd/TUerCkcCBiVx+v2QJpSdRID4bJxrh27V+Bb3pz+wNQDIYBroRDw==
-length: 3844
+</rss><!-- sparkle-signatures:
+edSignature: +Gpig5HAKZ0WGCRtxqOIRSMfGhWqA4JkPAKzro2x328tt7IxaVcV8lOe8HWXC4NIh7dS5J65b8zTB3Y/LnVSBQ==
+length: 5548
 -->
