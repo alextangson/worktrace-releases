@@ -1,37 +1,42 @@
-<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
+<?xml version="1.0" standalone="yes"?>
+<!-- sparkle-sign-warning:
 IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
---><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+-->
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>S-tello Trace</title>
         <item>
-            <title>2.1.5</title>
-            <pubDate>Sun, 19 Jul 2026 09:50:19 +0800</pubDate>
+            <title>2.1.6</title>
+            <pubDate>Sun, 19 Jul 2026 13:47:13 +0800</pubDate>
             <link>https://alextangson.github.io/worktrace-releases/</link>
-            <sparkle:version>215</sparkle:version>
-            <sparkle:shortVersionString>2.1.5</sparkle:shortVersionString>
+            <sparkle:version>216</sparkle:version>
+            <sparkle:shortVersionString>2.1.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[# S-tello Trace 2.1.5
+            <description sparkle:format="markdown"><![CDATA[# S-tello Trace 2.1.6
 
-## 第一份工作记忆更快形成
+## 内测问题更容易定位
 
-- 全新安装完成设置后可以直接开始正常工作。累计约 5 分钟有效、非静止的本机信号后，
-  S-tello Trace 会触发一次首批早分析，不再固定等到下一个 15 分钟轮询。
-- AI 配置、登录、处理授权或内测额度随后就绪时，只要本机证据已经足够，待分析工作会
-  立即继续；证据不足时不会对空数据或静止画面调用模型。
-- “首次分析开始”只在通过本机隐私检查、真正进入文字模型调用边界时记录，便于内测验证
-  从有效信号到第一份工作记忆的真实耗时。
+- 新增崩溃、卡死、异常退出和界面错误的本机诊断。诊断包会先在应用内预览，用户可以忽略、
+  单次发送，或另行开启以后自动发送；默认不会上传。
+- 诊断契约只允许应用版本、系统环境、错误类型、调用栈和有限健康计数，不包含截图、OCR、
+  窗口标题、网址、工作正文、用户输入、Prompt 或凭据。
+- 每个发布构建都会生成并私下归档 UUID 匹配的 dSYM，支持按构建号精确符号化，不会把符号表
+  上传到公开下载仓库。
 
-## 修改与评估保持一致
+## 周视图与工作系统不再被旧任务拖慢
 
-- 第一份工作记忆可以选择“准确”或“改一下”。用户修改、决定记录和项目纠正样本在同一个
-  SQLite 事务中提交；任一步失败都会整体回滚，不会留下半完成状态。
-- 设置中可以主动复制一份不含工作内容的本机内测结果。它不会自动上传，也不包含窗口文字、
-  截图、OCR、网址、精确时间或本机内部 ID。
+- 周时间轴改为整周一次精确查询，并复用日期解析结果；周简报按周去重并复用已准备的快照。
+- 离开页面或请求超时后会协作取消尚未开始的分析，避免孤儿任务持续占用 CPU、拖慢其他页面。
+- 工作系统刷新期间只轮询轻量状态，完成后读取一次完整结果；周视图在失败时显示可重试错误，
+  不再用空白时间轴掩盖超时。
+- 开发构建固定停留在本机开发通道，不会再被 Sparkle 的正式安装包覆盖；构建副本也不会进入
+  Spotlight 的“应用程序”结果。
 ]]></description>
-            <enclosure url="https://github.com/alextangson/worktrace-releases/releases/download/v2.1.5/S-tello-Trace-2.1.5.dmg" length="25429095" type="application/octet-stream" sparkle:edSignature="/7URJ4v7QHooOhHp5cmTBrZFiZaGYcwN8p/9WOPdCrb9BZMzlp+sLLbEDXp7Ekxr/tRADVuBgILdKKe5OKFHAg=="></enclosure>
+            <enclosure url="https://github.com/alextangson/worktrace-releases/releases/download/v2.1.6/S-tello-Trace-2.1.6.dmg" length="25824565" type="application/octet-stream" sparkle:edSignature="6bgagukIno3L7Ax9zpzGRrmfHXR8cWD8MeY5+ZXaVEKIImG3PTrW9guuyuJhGKGH80IdRUDDnClvZddRJniOAw=="/>
         </item>
     </channel>
-</rss><!-- sparkle-signatures:
-edSignature: Nw69iTH3Tpcy/hI9eHSD7zq/QYSwyAkIHQjtdXzK3uMQuSfyajj3yRL2KHZt1BrM5Q8xdRDK8EV26X7F2C3GCA==
-length: 2329
+</rss>
+<!-- sparkle-signatures:
+edSignature: lpkxvi5FL1X0FUH7SzIFFTh0cTEJQCab2syERvbKVGtKbWujLqmZ4wALClUwQSLDCEP72g97nFe+NFJxiTSwDA==
+length: 2487
 -->
