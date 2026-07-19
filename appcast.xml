@@ -4,66 +4,34 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>S-tello Trace</title>
         <item>
-            <title>2.1.4</title>
-            <pubDate>Sat, 18 Jul 2026 15:12:34 +0800</pubDate>
+            <title>2.1.5</title>
+            <pubDate>Sun, 19 Jul 2026 09:50:19 +0800</pubDate>
             <link>https://alextangson.github.io/worktrace-releases/</link>
-            <sparkle:version>214</sparkle:version>
-            <sparkle:shortVersionString>2.1.4</sparkle:shortVersionString>
+            <sparkle:version>215</sparkle:version>
+            <sparkle:shortVersionString>2.1.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[# S-tello Trace 2.1.4
+            <description sparkle:format="markdown"><![CDATA[# S-tello Trace 2.1.5
 
-这一版把个人工作记忆、可确认的重复 Loop、FDE handoff、工作系统和内测安全修复整合为同一个可分发版本。重点不是增加更多入口，而是让“记录工作—理解流程—发现自动化—进入 FDE 实施”形成可信的连续体验。
+## 第一份工作记忆更快形成
 
-## 从工作记忆到可实施机会
+- 全新安装完成设置后可以直接开始正常工作。累计约 5 分钟有效、非静止的本机信号后，
+  S-tello Trace 会触发一次首批早分析，不再固定等到下一个 15 分钟轮询。
+- AI 配置、登录、处理授权或内测额度随后就绪时，只要本机证据已经足够，待分析工作会
+  立即继续；证据不足时不会对空数据或静止画面调用模型。
+- “首次分析开始”只在通过本机隐私检查、真正进入文字模型调用边界时记录，便于内测验证
+  从有效信号到第一份工作记忆的真实耗时。
 
-- 新增持续工作线程和 Personal Loop：只有同一具体工作在至少三个当前日期出现并由本人确认，才会进入可复用工作流。
-- 新增可编辑的 Discovery Review，把证据、步骤、例外、权限和成功标准整理成明确的实施边界。
-- 可生成隐私最小化的本地 FDE handoff，交给 Codex、Claude Code 或 FDE 继续诊断；本地证据不会因为生成 handoff 自动上传。
-- 自动化机会可以继续进入 SOP、Agent Blueprint、受控 Pilot 与实施前后 Delta，避免只给抽象建议。
+## 修改与评估保持一致
 
-## 工作系统与自动化机会
-
-- “简报”和“工作系统”拆分为两个独立页面：简报用于个人回顾，工作系统用于查看近 4 周职责、重复工作流和自动化机会。
-- 自动化机会继续连接证据、ROI 假设、SOP、Agent Blueprint、Pilot 和实施前后 Delta，减少只有抽象分类、无法落地的问题。
-- 优化工作系统的加载状态和信息层级，保留未识别到机会时的证据积累进度。
-
-## 隐私与数据控制
-
-- 加固“完全不记录”“只记录、不截图”和显式 Ontology 同意边界；登录、加入组织或切换租户不会自动上传本机历史。
-- 完成固定范围的云数据导出，以及账号/组织删除的预览、重新认证、精确确认和失败重试边界；独立删除网关尚未公开，邀请码 Beta 的云账号删除仍通过人工支持处理。
-- 修复反馈离线队列、重复提交、失败隔离和回执丢失等边界，只有真正持久化的反馈才会显示为已排队。
-- 收紧本机调试服务和云端 RPC 权限；依赖异常、迁移版本不一致或邮箱安全策略缺失时会安全停止云功能，不影响本地采集。
-
-## 本次公开构建边界
-
-- 原始轨迹、OCR、时间线和本地回放仍以本机为数据面；登录不会上传已有工作历史，使用托管模型也不等于开启组织同步。
-- 全新安装默认使用 S-tello 托管的 Qwen3.5 Flash。内测用户通过邮箱或 Google 登录，
-  阅读并勾选当前版本的托管处理说明后，才可以输入一次性邀请码，领取 500 万 Token、
-  14 天有效的分析额度；模型 Key 不下发到客户端。
-- 默认选择托管 provider 不等于允许兑换或调用。升级前已经使用托管额度的用户也要重新
-  确认；未同意时邀请码兑换、手动测试和后台分析都会停止，托管视觉还需要另一项独立同意。
-- 用户可在“账户与 AI”撤回本机同意；新的托管调用会立即停止，已经在途但尚未返回的
-  结果不会进入本机分析或持久化。
-- 托管请求会经 Cloudflare 上的 S-tello Gateway 发往阿里云 Model Studio 北京区；
-  当前任务所需上下文会离开设备，原始本机证据库不会整体上传。上游没有给出可承诺的
-  精确保留期，因此产品不会声称“零保留”或“立即删除”；完整边界见中英文隐私页。
-- 用户仍可随时切换为自己的 API Key，或在性能足够的设备上使用本地 Ollama；已有用户的模型设置不会被覆盖。
-- 这里的 local-first 指原始轨迹、OCR、像素库和个人数据控制留在本机，云端不可用时
-  核心功能仍工作；它不等于要求普通用户部署本地模型。
-- 本地采集、今天、周视图、简报、工作系统、搜索、导出、Loop 确认和本地 FDE handoff
-  不依赖组织云。公开 C build 隐藏组织同步、tenant switcher、FDE 云治理、云数据自助
-  导出/删除和 lifecycle UI；这些能力仍不作为本次公开功能。
-
-## 稳定性
-
-- 修复 408/5xx 被错误视为永久失败、确认响应丢失后无法安全重试等同步问题。
-- 保留近期对时间线归因、应用图标和分析积压恢复的修复，降低碎片化和错误合并。
-- 更新内置界面资源、发布检查和签名流程，确保安装包包含本次所有前端与原生改动。
+- 第一份工作记忆可以选择“准确”或“改一下”。用户修改、决定记录和项目纠正样本在同一个
+  SQLite 事务中提交；任一步失败都会整体回滚，不会留下半完成状态。
+- 设置中可以主动复制一份不含工作内容的本机内测结果。它不会自动上传，也不包含窗口文字、
+  截图、OCR、网址、精确时间或本机内部 ID。
 ]]></description>
-            <enclosure url="https://github.com/alextangson/worktrace-releases/releases/download/v2.1.4/S-tello-Trace-2.1.4.dmg" length="24981526" type="application/octet-stream" sparkle:edSignature="DDF2bXUp2WOAMTjWGGqFERS9Qv6OJ3zFyRmDyroYMKHozo/qpNT0tNdnCu6enGDO1Ct/R0heLN7r/GQuzcJNAw=="></enclosure>
+            <enclosure url="https://github.com/alextangson/worktrace-releases/releases/download/v2.1.5/S-tello-Trace-2.1.5.dmg" length="25429095" type="application/octet-stream" sparkle:edSignature="/7URJ4v7QHooOhHp5cmTBrZFiZaGYcwN8p/9WOPdCrb9BZMzlp+sLLbEDXp7Ekxr/tRADVuBgILdKKe5OKFHAg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: +Gpig5HAKZ0WGCRtxqOIRSMfGhWqA4JkPAKzro2x328tt7IxaVcV8lOe8HWXC4NIh7dS5J65b8zTB3Y/LnVSBQ==
-length: 5548
+edSignature: Nw69iTH3Tpcy/hI9eHSD7zq/QYSwyAkIHQjtdXzK3uMQuSfyajj3yRL2KHZt1BrM5Q8xdRDK8EV26X7F2C3GCA==
+length: 2329
 -->
