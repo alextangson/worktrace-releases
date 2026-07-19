@@ -6,37 +6,31 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>S-tello Trace</title>
         <item>
-            <title>2.1.6</title>
-            <pubDate>Sun, 19 Jul 2026 13:47:13 +0800</pubDate>
+            <title>2.1.7</title>
+            <pubDate>Sun, 19 Jul 2026 17:08:09 +0800</pubDate>
             <link>https://alextangson.github.io/worktrace-releases/</link>
-            <sparkle:version>216</sparkle:version>
-            <sparkle:shortVersionString>2.1.6</sparkle:shortVersionString>
+            <sparkle:version>217</sparkle:version>
+            <sparkle:shortVersionString>2.1.7</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[# S-tello Trace 2.1.6
+            <description sparkle:format="markdown"><![CDATA[# S-tello Trace 2.1.7
 
-## 内测问题更容易定位
+## 版本信息保持一致
 
-- 新增崩溃、卡死、异常退出和界面错误的本机诊断。诊断包会先在应用内预览，用户可以忽略、
-  单次发送，或另行开启以后自动发送；默认不会上传。
-- 诊断契约只允许应用版本、系统环境、错误类型、调用栈和有限健康计数，不包含截图、OCR、
-  窗口标题、网址、工作正文、用户输入、Prompt 或凭据。
-- 每个发布构建都会生成并私下归档 UUID 匹配的 dSYM，支持按构建号精确符号化，不会把符号表
-  上传到公开下载仓库。
+- 修复侧栏与设置仍显示 2.1.5 的问题；App 内服务现在直接读取当前安装包的真实版本。
+- 诊断包、健康状态、更新检查和界面统一使用同一个版本来源。
+- 发版门禁会校验无界面服务的 fallback 与 App 版本一致，避免后续再次发生版本分裂。
 
-## 周视图与工作系统不再被旧任务拖慢
+## 延续 2.1.6 内测能力
 
-- 周时间轴改为整周一次精确查询，并复用日期解析结果；周简报按周去重并复用已准备的快照。
-- 离开页面或请求超时后会协作取消尚未开始的分析，避免孤儿任务持续占用 CPU、拖慢其他页面。
-- 工作系统刷新期间只轮询轻量状态，完成后读取一次完整结果；周视图在失败时显示可重试错误，
-  不再用空白时间轴掩盖超时。
-- 开发构建固定停留在本机开发通道，不会再被 Sparkle 的正式安装包覆盖；构建副本也不会进入
-  Spotlight 的“应用程序”结果。
+- 崩溃、卡死、异常退出和界面错误先在本机形成可预览诊断草稿，默认不会自动上传。
+- 周视图、周简报与工作系统继续使用去重、结果复用和协作取消，避免旧任务拖慢新页面。
+- 每个发布构建私下归档 UUID 匹配的 dSYM，支持按构建号精确符号化。
 ]]></description>
-            <enclosure url="https://github.com/alextangson/worktrace-releases/releases/download/v2.1.6/S-tello-Trace-2.1.6.dmg" length="25824565" type="application/octet-stream" sparkle:edSignature="6bgagukIno3L7Ax9zpzGRrmfHXR8cWD8MeY5+ZXaVEKIImG3PTrW9guuyuJhGKGH80IdRUDDnClvZddRJniOAw=="/>
+            <enclosure url="https://github.com/alextangson/worktrace-releases/releases/download/v2.1.7/S-tello-Trace-2.1.7.dmg" length="25825666" type="application/octet-stream" sparkle:edSignature="MDii5Zw7s3GpZBlu0Fv8krouDHkoJM0QRUJQL8naamUkOXObTVAoBbDrg+iyR3FydCCKTmkP5IAWF7dT1TSGCg=="/>
         </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: lpkxvi5FL1X0FUH7SzIFFTh0cTEJQCab2syERvbKVGtKbWujLqmZ4wALClUwQSLDCEP72g97nFe+NFJxiTSwDA==
-length: 2487
+edSignature: oVMy0WUotwGeyiNtoJBNFg7e7xaXnbvIkYo515V8Eimk9dYb4LOE1Lr0kXsGYidregErUuWg+HLBSVq/CUSJCg==
+length: 1944
 -->
