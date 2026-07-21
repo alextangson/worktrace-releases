@@ -6,31 +6,34 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>S-tello Trace</title>
         <item>
-            <title>2.1.7</title>
-            <pubDate>Sun, 19 Jul 2026 17:08:09 +0800</pubDate>
+            <title>2.1.8</title>
+            <pubDate>Tue, 21 Jul 2026 15:46:50 +0800</pubDate>
             <link>https://alextangson.github.io/worktrace-releases/</link>
-            <sparkle:version>217</sparkle:version>
-            <sparkle:shortVersionString>2.1.7</sparkle:shortVersionString>
+            <sparkle:version>218</sparkle:version>
+            <sparkle:shortVersionString>2.1.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[# S-tello Trace 2.1.7
+            <description sparkle:format="markdown"><![CDATA[# S-tello Trace 2.1.8
 
-## 版本信息保持一致
+## 修复部分 Mac 只记录 Trace 自身的问题
 
-- 修复侧栏与设置仍显示 2.1.5 的问题；App 内服务现在直接读取当前安装包的真实版本。
-- 诊断包、健康状态、更新检查和界面统一使用同一个版本来源。
-- 发版门禁会校验无界面服务的 fallback 与 App 版本一致，避免后续再次发生版本分裂。
+- 修复安装版隐藏或被其他窗口遮挡后，后台前台应用采样可能被系统延迟的问题。
+- S-tello Trace 自身现在会在事件采集、屏幕 OCR、失败重试和退出写入等所有边界被强制
+  排除，不会再被识别为用户工作。
+- 连续切换不同应用会恢复为真实、独立的工作事件，不再聚合成一大块 Trace 记录。
 
-## 延续 2.1.6 内测能力
+## 安全修复已有错误数据
 
-- 崩溃、卡死、异常退出和界面错误先在本机形成可预览诊断草稿，默认不会自动上传。
-- 周视图、周简报与工作系统继续使用去重、结果复用和协作取消，避免旧任务拖慢新页面。
-- 每个发布构建私下归档 UUID 匹配的 dSYM，支持按构建号精确符号化。
+- 升级后会自动隔离历史上的 S-tello Trace 自采集事件，并清除其中可能包含工作台内容的
+  OCR 与视觉描述。
+- 仅删除完全由自身事件生成、且未经用户编辑的工作块；人工修正和包含真实应用证据的混合
+  工作块会保留。
+- 受影响期间没有实际采样到的其他应用活动无法事后恢复，升级后的新记录不受影响。
 ]]></description>
-            <enclosure url="https://github.com/alextangson/worktrace-releases/releases/download/v2.1.7/S-tello-Trace-2.1.7.dmg" length="25825666" type="application/octet-stream" sparkle:edSignature="MDii5Zw7s3GpZBlu0Fv8krouDHkoJM0QRUJQL8naamUkOXObTVAoBbDrg+iyR3FydCCKTmkP5IAWF7dT1TSGCg=="/>
+            <enclosure url="https://github.com/alextangson/worktrace-releases/releases/download/v2.1.8/S-tello-Trace-2.1.8.dmg" length="25829274" type="application/octet-stream" sparkle:edSignature="H3mLCRuXQxlPPz2SFpoLA4P+mb8SWe0PVo+R0Eq4h545RUYrIYcd9tcepvVDShh4tbc1AQDEeyZPqU3UTeiMBQ=="/>
         </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: oVMy0WUotwGeyiNtoJBNFg7e7xaXnbvIkYo515V8Eimk9dYb4LOE1Lr0kXsGYidregErUuWg+HLBSVq/CUSJCg==
-length: 1944
+edSignature: CQA7lbNpLDbXTeQaT9krDXygwCkJ08/YIV99iFOMaej8z+HP53bFfWFk4RWR1n4TQYlzmMCDjaYp0Cc7B+jrBg==
+length: 2118
 -->
