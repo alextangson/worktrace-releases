@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>S-tello Trace</title>
+        <item>
+            <title>2.1.8</title>
+            <pubDate>Thu, 23 Jul 2026 10:06:09 +0800</pubDate>
+            <link>https://github.com/alextangson/worktrace-releases/releases/tag/v2.1.8-classification-beta.219</link>
+            <sparkle:version>219</sparkle:version>
+            <sparkle:shortVersionString>2.1.8</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[# S-tello Trace 2.1.8（219）项目分类内测
+
+## 不同会话不再天然混成一个项目
+
+- Claude 与 Codex 的独立会话上下文进入分类证据，不再只依赖应用名或宽泛窗口信息。
+- “简报 → 分类校准”主动呈现冲突、不确定和新旧判断不一致的记录。
+- 只有用户确认过、证据强度足够且一致指向同一项目的上下文，才会影响后续新记录。
+
+## 安全边界
+
+- 显式项目规则始终优先；同一上下文出现不同项目纠正时立即停止自动归属，不做多数表决。
+- 不批量改写已有历史记录，也不把 shadow 模型结果直接写成正式项目。
+- “复制内测诊断”只导出聚合计数、比例、构建开关和门禁，不包含项目名、窗口文字、截图、
+  OCR、网址、工作描述或本机内部 ID；应用不会自动上传诊断。
+
+## 独立更新通道
+
+- 这是 GitHub prerelease，不会替换正式版 `v2.1.8` 或正式 `appcast.xml`。
+- 首次从正式版切换需要手动安装一次；此后应用每 6 小时检查独立 Beta feed，并由用户确认安装。
+- 如需退出内测，重新安装官网的正式 `S-tello-Trace-2.1.8.dmg` 即可，本地数据无需删除。
+]]></description>
+            <enclosure url="https://github.com/alextangson/worktrace-releases/releases/download/v2.1.8-classification-beta.219/S-tello-Trace-2.1.8-classification-beta-b219.dmg" length="26325662" type="application/octet-stream" sparkle:edSignature="dc63iWWwAM0dHTXYF1VcxsvYv/znKdWdBKVkNydbcVXr7c8/OPW5KiZgFfFYzecaZc6zMa2IibYLpo0d3FgSAw=="></enclosure>
+        </item>
+    </channel>
+</rss><!-- sparkle-signatures:
+edSignature: P71EYOXPGHiK4LmxAxtzMq1t9eNiwei6ZrDAiaY8jcw/wgu3mjKSHFFC/1dBXqn2YxfBxz87gW5TpRxSFE9HAA==
+length: 2545
+-->
